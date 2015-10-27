@@ -12,7 +12,7 @@
 		<table>
 			<thead>
 				<tr>
-					<th colspan="2"><h1>User Log In</h1>/th>
+					<th colspan="2"><h1>User Log In</h1></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -25,7 +25,9 @@
 					<td><input type="password" name="password"/></td>
 				</tr>
 				<tr>
-					<td colspan="2"></td>
+					<td colspan="2">
+						<input type="submit" value="Sign Ins">
+					</td>
 				</tr>
 			</tbody>
 		</table>

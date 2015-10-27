@@ -2,6 +2,7 @@ package com.spring.dao;
 
 import javax.sql.DataSource;
 
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.spring.domain.User;
@@ -24,7 +25,11 @@ public class UserDaoImpl implements UserDao{
 		User userlogin=new User();
 		String sql="SELECT * FROM tbluser u WHERE u.Username=? and u.Password=?";
 		JdbcTemplate jdbcTempleate=new JdbcTemplate(getDataSource());
-		userlogin=jdbcTempleate.queryForObject(sql,new Object[]{user.getUid(),user.getPassword()},new UserRowMapper());
+		try{
+			userlogin=jdbcTempleate.queryForObject(sql,new Object[]{user.getUsername(),user.getPassword()},new UserRowMapper());
+		}catch(DataAccessException e){
+			e.printStackTrace();
+		}
 		return userlogin;
 	}
 

@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="${pageContext.request.contextPath }/login.html">Sign In</a>
-	<a href="/register.html">Register</a>
+		<h1>kalsjdfaskjdfjn </h1>
 </body>
 </html>

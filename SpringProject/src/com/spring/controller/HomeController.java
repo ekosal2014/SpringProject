@@ -11,14 +11,14 @@ import org.springframework.web.portlet.ModelAndView;
 
 import com.spring.domain.User;
 import com.spring.services.UserService;
+import com.spring.services.UserServiceImpl;
 
 @Controller
 public class HomeController {
 	
 	public static ApplicationContext context=new ClassPathXmlApplicationContext("Beans.xml");	
 	
-	@Autowired
-	UserService userService;
+	UserService userService=new UserServiceImpl();
 	
 	@RequestMapping(value="/home")
 	public ModelAndView defaultpage(){
@@ -35,9 +35,13 @@ public class HomeController {
 		User userLogin=new User();
 		userLogin=userService.getUserLogin(user);
 		if (userLogin == null){
-			return "/login";
+			return "redirect:login.html";
 		}
-		return ("userinfo.html");
+		return "redirect:userinfo.html";
 	}
 
+	@RequestMapping(value="/userinfo.html",method=RequestMethod.GET)
+	public ModelAndView Userpage(){
+		return new ModelAndView("userinfo");
+	}
 }
