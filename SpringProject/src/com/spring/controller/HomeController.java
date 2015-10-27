@@ -6,6 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.portlet.ModelAndView;
 
 import com.spring.domain.User;
@@ -24,7 +25,12 @@ public class HomeController {
 		return new ModelAndView("home");
 	}
 	
-	@RequestMapping(value="/login.html")
+	@RequestMapping(value="/login.html",method=RequestMethod.GET)
+	public ModelAndView loginloadingPage(@ModelAttribute("user") User user){		
+		return new ModelAndView("login");
+	}
+	
+	@RequestMapping(value="/login.html",method=RequestMethod.POST)
 	public String loginPage(@ModelAttribute("user") User user){
 		User userLogin=new User();
 		userLogin=userService.getUserLogin(user);
