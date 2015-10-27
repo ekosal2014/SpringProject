@@ -29,7 +29,7 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
-	public User getUserInfo(User user) {
+	public User getUserInfo(String user) {
 		// TODO Auto-generated method stub
 		return null;
 	}
