@@ -98,5 +98,7 @@
 		</tbody>
 	</table>
 	
+	<script type="text/javascript" src="<c:url value='../resources/js/jquery-2.1.0.min.js'/>"></script>
+	<script type="text/javascript" src="<c:url value='../resources/js/custom.js'/>"></script>
 </body>
 </html>
