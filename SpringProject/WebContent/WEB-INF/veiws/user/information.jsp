@@ -9,7 +9,8 @@
 <link rel="stylesheet" type="text/css" href='<c:url value="../resources/css/style.css"/>'/>
 </head>
 <body>
-	<table>
+
+	<table border="0" cellpadding="0" cellspacing="0">
 		<thead>
 			<tr>
 				<th colspan="2"><h1>Information Management</h1></th>
@@ -21,6 +22,7 @@
 					<div id="broswer_image">
 						<img src="<c:url value='../resources/images/default_image.jpg'/>"/>
 					</div>
+					<input type="file"/>
 				</td>
 				<td>
 					
@@ -28,19 +30,19 @@
 			</tr>
 			<tr>
 				<td>
-					<a href="javascript:">Save Change</a>
+					
 				</td>
 				<td>
 				</td>
 			</tr>
-			<tr>
+			<tr class="tr-controll-info">
 				<td>Full Name</td>
 				<td>
-					<div>
-						<div style="position: relative;">
+					<div class="controll-info-row">
+						<div style="position: relative;" class="controll-top">
 							<div class="titleinfo-right">E KOSAL</div>
 							<div class="setting-left">
-								<a href="javascript:">edit</a>
+								<a href="javascript:" class="controll-edit">edit</a>
 							</div>
 						</div>
 						<div class="controll-info-edit">
@@ -52,53 +54,132 @@
 								<a href="javascript:">Cancel</a>
 							</div>
 						</div>
+						<div style="clear: both;"></div>
 					</div>
 				</td>
 			</tr>
-			<tr>
+			<tr class="tr-controll-info">
 				<td>Sex</td>
 				<td>
-					<div>
-						E kosal
+					<div class="controll-info-row">
+						<div style="position: relative;" class="controll-top">
+							<div class="titleinfo-right">E KOSAL</div>
+							<div class="setting-left">
+								<a href="javascript:" class="controll-edit">edit</a>
+							</div>
+						</div>
+						<div class="controll-info-edit">
+							<div>
+								<input type="text" name="name">
+							</div>
+							<div>
+								<a href="javascript:">Save</a>
+								<a href="javascript:">Cancel</a>
+							</div>
+						</div>
+						<div style="clear: both;"></div>
 					</div>
 				</td>
 			</tr>
-			<tr>
+			<tr class="tr-controll-info">
 				<td>Date Of Birth</td>
 				<td>
-					<div>
-						E kosal
+					<div class="controll-info-row">
+						<div style="position: relative;" class="controll-top">
+							<div class="titleinfo-right">E KOSAL</div>
+							<div class="setting-left">
+								<a href="javascript:" class="controll-edit">edit</a>
+							</div>
+						</div>
+						<div class="controll-info-edit">
+							<div>
+								<input type="text" name="name">
+							</div>
+							<div>
+								<a href="javascript:">Save</a>
+								<a href="javascript:">Cancel</a>
+							</div>
+						</div>
+						<div style="clear: both;"></div>
 					</div>
 				</td>
 			</tr>
-			<tr>
+			<tr class="tr-controll-info">
 				<td>Phone</td>
 				<td>
-					<div>
-						E kosal
+					<div class="controll-info-row">
+						<div style="position: relative;" class="controll-top">
+							<div class="titleinfo-right">E KOSAL</div>
+							<div class="setting-left">
+								<a href="javascript:" class="controll-edit">edit</a>
+							</div>
+						</div>
+						<div class="controll-info-edit">
+							<div>
+								<input type="text" name="name">
+							</div>
+							<div>
+								<a href="javascript:">Save</a>
+								<a href="javascript:">Cancel</a>
+							</div>
+						</div>
+						<div style="clear: both;"></div>
 					</div>
 				</td>
 			</tr>
-			<tr>
+			<tr class="tr-controll-info">
 				<td>E-mail</td>
 				<td>
-					<div>
-						E kosal
+					<div class="controll-info-row">
+						<div style="position: relative;" class="controll-top">
+							<div class="titleinfo-right">E KOSAL</div>
+							<div class="setting-left">
+								<a href="javascript:" class="controll-edit">edit</a>
+							</div>
+						</div>
+						<div class="controll-info-edit">
+							<div>
+								<input type="text" name="name">
+							</div>
+							<div>
+								<a href="javascript:">Save</a>
+								<a href="javascript:">Cancel</a>
+							</div>
+						</div>
+						<div style="clear: both;"></div>
 					</div>
 				</td>
 			</tr>
-			<tr>
+			<tr class="tr-controll-info">
 				<td>Address</td>
 				<td>
-					<div>
-						E kosal
+					<div class="controll-info-row">
+						<div style="position: relative;" class="controll-top">
+							<div class="titleinfo-right">E KOSAL</div>
+							<div class="setting-left">
+								<a href="javascript:" class="controll-edit">edit</a>
+							</div>
+						</div>
+						<div class="controll-info-edit">
+							<div>
+								<input type="text" name="name">
+							</div>
+							<div>
+								<a href="javascript:">Save</a>
+								<a href="javascript:">Cancel</a>
+							</div>
+						</div>
+						<div style="clear: both;"></div>
 					</div>
 				</td>
 			</tr>
 		</tbody>
 	</table>
-	
+
 	<script type="text/javascript" src="<c:url value='../resources/js/jquery-2.1.0.min.js'/>"></script>
 	<script type="text/javascript" src="<c:url value='../resources/js/custom.js'/>"></script>
+
+	
+
 </body>
 </html>

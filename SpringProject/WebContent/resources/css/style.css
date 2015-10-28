@@ -1,3 +1,8 @@
+.controll-info-row{
+	cursor: pointer;
+	padding: 10px 0px;
+	width:200px;
+}
 .titleinfo-right{
 	float: left;
 }
@@ -8,4 +13,7 @@
 }
 .controll-info-edit{
 	display: none;
+}
+#broswer_image:hover{
+	cursor:pointer;
 }

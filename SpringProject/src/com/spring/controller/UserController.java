@@ -61,4 +61,5 @@ public class UserController {
 	public ModelAndView defaultUserInformation(){
 		return new ModelAndView("information");
 	}
+	
 }
