@@ -41,7 +41,7 @@ public class UserDaoImpl implements UserDao{
 
 	@Override
 	public void insertUserInfo(User user) {
-		String sql="INSERT INTO tblUsers(name,sex,dob,username,password,phone,email,address) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+		String sql="INSERT INTO tblUsers(name,sex,dob,username,password,phone,email,address,image) VALUES (?, ?, ?, ?, ?, ?, ?, ?,'default_image.jpg')";
 		JdbcTemplate jdbcTemplate=new JdbcTemplate(getDataSource());
 		jdbcTemplate.update(sql,new Object[] {user.getName(),user.getSex(),user.getDob(),user.getUsername(),user.getPassword(),user.getPhone(),user.getEmail(),user.getAddress()});
 	}

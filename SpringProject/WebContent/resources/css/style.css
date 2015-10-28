@@ -1,0 +1,11 @@
+.titleinfo-right{
+	float: left;
+}
+.setting-left{
+	position: absolute;
+	right: 0px;
+	display:none;
+}
+.controll-info-edit{
+	display: none;
+}
