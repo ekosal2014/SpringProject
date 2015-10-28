@@ -23,8 +23,9 @@
 				<tr>
 					<td>Sex : </td>
 					<td>
+						<input type="radio" name="sex" value="0" checked="checked">Female
 						<input type="radio" name="sex" value="1">Male
-						<input type="radio" name="sex" value="0">Female
+						
 				    </td>
 				</tr>
 				<tr>

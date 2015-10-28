@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-		<a href="${pageContext.request.contextPath }/user/acticle.html">Acticle</a>
-		<a href="${pageContext.request.contextPath }/user/information.html">Information</a>
+	<h1>Information Management</h1>
 </body>
 </html>

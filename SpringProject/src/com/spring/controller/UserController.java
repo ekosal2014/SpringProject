@@ -44,6 +44,21 @@ public class UserController {
 	public String defaultRegisterSubmi(@ModelAttribute("user") User user){
 		//System.out.println(user.getName()+"  "+user.getSex()+"  "+user.getDob()+"  "+user.getUsername()+"  "+user.getPassword()+"  "+user.getPhone()+"  "+user.getEmail()+"  "+user.getAddress());
 		userService.insertUserInfo(user);
-		return "redirect:userinfo";
+		return "redirect:userinfo.html";
+	}
+	
+	@RequestMapping(value="/userinfo.html",method=RequestMethod.POST)
+	public ModelAndView defaultUserPage(){
+		return new ModelAndView("userinfo");
+	}
+	
+	@RequestMapping(value="acticle.html",method=RequestMethod.GET)
+	public ModelAndView defaultUserActicle(){
+		return new ModelAndView("acticle");
+	}
+	
+	@RequestMapping(value="/information.html",method=RequestMethod.GET)
+	public ModelAndView defaultUserInformation(){
+		return new ModelAndView("information");
 	}
 }

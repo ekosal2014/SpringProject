@@ -45,5 +45,4 @@ public class UserDaoImpl implements UserDao{
 		JdbcTemplate jdbcTemplate=new JdbcTemplate(getDataSource());
 		jdbcTemplate.update(sql,new Object[] {user.getName(),user.getSex(),user.getDob(),user.getUsername(),user.getPassword(),user.getPhone(),user.getEmail(),user.getAddress()});
 	}
-
 }
