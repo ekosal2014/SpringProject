@@ -16,7 +16,6 @@ import com.spring.services.UserServiceImpl;
 public class HomeController {
 	
 	public static ApplicationContext context=new ClassPathXmlApplicationContext("Beans.xml");	
-	
 	UserService userService=new UserServiceImpl();
 	
 	@RequestMapping(value="/home")
@@ -36,11 +35,8 @@ public class HomeController {
 		if (userLogin == null){
 			return "redirect:login.html";
 		}
-		return "redirect:userinfo.html";
+		return "redirect:user/userinfo.html";
 	}
 
-	@RequestMapping(value="/userinfo.html",method=RequestMethod.GET)
-	public ModelAndView Userpage(){
-		return new ModelAndView("userinfo");
-	}
+	
 }

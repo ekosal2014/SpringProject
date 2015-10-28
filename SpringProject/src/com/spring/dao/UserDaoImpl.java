@@ -23,7 +23,7 @@ public class UserDaoImpl implements UserDao{
 	@Override
 	public User getUserLogin(User user) {
 		User userlogin=new User();
-		String sql="SELECT * FROM tbluser u WHERE u.Username=? and u.Password=?";
+		String sql="SELECT * FROM tblusers u WHERE u.Username=? and u.Password=?";
 		JdbcTemplate jdbcTempleate=new JdbcTemplate(getDataSource());
 		try{
 			userlogin=jdbcTempleate.queryForObject(sql,new Object[]{user.getUsername(),user.getPassword()},new UserRowMapper());
@@ -37,6 +37,13 @@ public class UserDaoImpl implements UserDao{
 	public User getUserInfo(String user) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public void insertUserInfo(User user) {
+		String sql="INSERT INTO tblUsers(name,sex,dob,username,password,phone,email,address) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+		JdbcTemplate jdbcTemplate=new JdbcTemplate(getDataSource());
+		jdbcTemplate.update(sql,new Object[] {user.getName(),user.getSex(),user.getDob(),user.getUsername(),user.getPassword(),user.getPhone(),user.getEmail(),user.getAddress()});
 	}
 
 }

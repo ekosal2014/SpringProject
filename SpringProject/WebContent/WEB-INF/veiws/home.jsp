@@ -8,6 +8,6 @@
 </head>
 <body>
 	<a href="${pageContext.request.contextPath }/login.html">Sign In</a>
-	<a href="/register.html">Register</a>
+	<a href="${pageContext.request.contextPath }/user/register.html">Register</a>
 </body>
 </html>
