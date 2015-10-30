@@ -9,7 +9,8 @@
 <link rel="stylesheet" type="text/css" href='<c:url value="../resources/css/style.css"/>'/>
 </head>
 <body>
-
+	<a href="${pageContext.request.contextPath }/user/acticle.html">Test</a>
+	<form id="submitForm" action="${pageContext.request.contextPath }/user/singleSave.html" method="post" enctype="multipart/form-data">
 	<table border="0" cellpadding="0" cellspacing="0">
 		<thead>
 			<tr>
@@ -22,7 +23,8 @@
 					<div id="broswer_image">
 						<img src="<c:url value='../resources/images/default_image.jpg'/>"/>
 					</div>
-					<input type="file"/>
+					
+					<input type="file" name="upload" id="upload"></input>
 				</td>
 				<td>
 					
@@ -30,7 +32,7 @@
 			</tr>
 			<tr>
 				<td>
-					
+					<a href="javascript:" id="saveImageChange">Save Change</a>
 				</td>
 				<td>
 				</td>
@@ -51,7 +53,7 @@
 							</div>
 							<div>
 								<a href="javascript:">Save</a>
-								<a href="javascript:">Cancel</a>
+								<a href="javascript:" class="cancel">Cancel</a>
 							</div>
 						</div>
 						<div style="clear: both;"></div>
@@ -175,11 +177,28 @@
 			</tr>
 		</tbody>
 	</table>
-
+	</form>
 	<script type="text/javascript" src="<c:url value='../resources/js/jquery-2.1.0.min.js'/>"></script>
 	<script type="text/javascript" src="<c:url value='../resources/js/custom.js'/>"></script>
-
-	
+     <script>
+     	$(document).ready(function(){
+     		$("#saveImageChange").click(function(){
+     			 $.ajax({
+     		            type:'POST',
+     		            url: "/user/singleSave.html",
+     		            data:"id="+10,
+     		            success:function(data){
+     		                console.log("success");
+     		                console.log(data);
+     		            },
+     		            error: function(data){
+     		                console.log("error");
+     		                console.log(data);
+     		            }
+     		        });
+     		});
+     	});
+     </script>
 
 </body>
 </html>

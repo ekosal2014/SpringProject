@@ -6,8 +6,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.portlet.ModelAndView;
-
 import com.spring.domain.User;
 import com.spring.services.UserService;
 import com.spring.services.UserServiceImpl;
@@ -62,4 +64,9 @@ public class UserController {
 		return new ModelAndView("information");
 	}
 	
+	@RequestMapping(value="/singleSave.html",method=RequestMethod.POST)
+	public @ResponseBody String defaultSingleSave(@RequestParam("id") int id){
+		System.out.println("Single Save");
+		return "Hello";
+	}
 }
